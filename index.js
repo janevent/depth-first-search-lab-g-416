@@ -54,7 +54,9 @@ function findAdjacentNodes(rootNode, vertices, edges){
   let adjacentNodes = edgeNames.map( (name) => {
     return findNode(name, vertices)
   })
-  return adjacentNodes;
+  return adjacentNodes.filter( (node) => {
+    return !node.discovered
+  });
 }
 
 function findNode(name, vertices){
