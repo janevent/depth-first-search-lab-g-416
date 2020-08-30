@@ -22,8 +22,9 @@
 // }
 
 function depthFirstSearch(rootNode, vertices, edges){
-  let explored = [rootNode];
-  let visited = [];
+  let explored = [];
+  explored.push(rootNode)
+  let visited = [rootNode];
   while(explored.length !== 0){
     let v = explored.pop();
     if(!v.discovered){
