@@ -24,7 +24,16 @@
 function depthFirstSearch(rootNode, vertices, edges){
   let explored = [rootNode];
   let visited = [];
-  while(explored != 0){
-    
+  while(explored !== 0){
+    let v = explored.pop();
+    if(!v.discovered){
+      v.discovered = true;
+      let adjacents = findAdjacentNodes(v, vertices, edges);
+      adjacents.forEach( (node) => {
+        visited.push(node);
+        explored.push(node);
+      })
+    }
   }
+  return visited
 }
