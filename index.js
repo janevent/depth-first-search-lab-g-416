@@ -15,7 +15,7 @@ function depthFirstSearch(rootNode, vertices, edges){
   })
   
   let filteredAdjacentVertices = adjacentVertices.filter( (vertix) => {
-    return vertix.discovered === null
+    return vertix.discovered === 'null'
   })
   
   return filteredAdjacentVertices
