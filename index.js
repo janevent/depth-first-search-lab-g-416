@@ -21,4 +21,4 @@ function depthFirstSearch(rootNode, vertices, edges){
   return filteredAdjacentVertices
 }
 
-function depthFirstSearch
+function depthFirstSearch(rootNode,)
