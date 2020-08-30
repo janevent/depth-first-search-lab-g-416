@@ -37,3 +37,21 @@ function depthFirstSearch(rootNode, vertices, edges){
   }
   return visited
 }
+
+function findAdjacentNodes(rootNode, vertices, edges){
+  let edgeNames = edges.map( (edge) => {
+    return edge.find( (edgeName) => {
+      return edgeName === rootNode.name
+    })
+  })
+  let adjacentNodes = edgeNames.map( (name) => {
+    return findNode(name, vertices)
+  })
+  return adjacentNodes;
+}
+
+function findNode(name, vertices){
+  return vertices.find( (vertix) => {
+    return vertix.name === name
+  })
+}
