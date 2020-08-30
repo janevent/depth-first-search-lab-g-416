@@ -26,13 +26,13 @@ function depthFirstSearch(rootNode, vertices, edges){
   explored.push(rootNode)
   let visited = [rootNode];
   while(explored.length !== 0){
-    console.log('explored[0]', explored[0])
+    //console.log('explored[0]', explored[0])
     let v = explored.pop();
     if(!v.discovered){
       v.discovered = true;
       let adjacents = findAdjacentNodes(v, vertices, edges);
       adjacents.forEach( (node) => {
-        console.log('node', node)
+        //console.log('node', node)
         visited.push(node);
         explored.push(node);
       })
