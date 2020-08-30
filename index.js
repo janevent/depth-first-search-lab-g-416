@@ -43,8 +43,11 @@ function depthFirstSearch(rootNode, vertices, edges){
 }
 
 function findAdjacentNodes(rootNode, vertices, edges){
-  let edgeNames = edges.map( (edge) => {
+  let edgies = edges.filter( (edge) => {
     return edge === rootNode.name;
+  })
+  let edgeNames = edgies.map( (edge) => {
+    return edge.find( (e) => e !== rootNode.name)
   })
   console.log('edgeNames', edgeNames)
   let adjacentNodes = edgeNames.map( (name) => {
