@@ -7,7 +7,7 @@ function depthFirstSearch(rootNode, vertices, edges){
   let v = currentVertices.shift();
   v.discovered = true
   exploredVertices.push(v)
- 
+  let edgeNames = edgesWithAdjacents.map(function(edge))
   let adjacentVertices = vertices.filter( (vertix) => {
     edgesWithAdjacents.map( (edge) => {
       return vertix.name === edge[0] || vertix.name === edge[1]
